@@ -1,124 +1,229 @@
-# Amazon Fire TV: Emotion-Aware Personalization 🎬
+# Amazon Fire TV: Emotion-Aware Personalisation 🎬
 
 > **Amazon HackOn 5.0 | Product Innovation Case Study | June 2025**
 
-**Team HeYou — Hemakshi Kumar & Youkta Mandavkar**
-
-🔗 [Amazon HackOn 5.0](https://tinyurl.com/az-hack-on)
-
 ---
 
-## 📌 Overview
+## Overview
 
-Streaming platforms offer thousands of titles, but more choice often creates **decision fatigue rather than better discovery**.
+Streaming platforms offer thousands of titles, but content abundance can create **decision fatigue, repetitive recommendations, and fragmented discovery**.
 
-For Amazon Fire TV, we identified three key user pain points:
+We proposed an AI-driven personalisation layer for Amazon Fire TV that considers not only what users watch, but also **how they feel, when they watch, and who they watch with**.
 
-- 🎭 **Content overload** — recommendations can feel repetitive or impersonal.
-- 🧠 **Lack of emotional context** — users often choose content based on their current mood rather than genre alone.
-- 👥 **Fragmented social discovery** — viewers lack lightweight ways to discover and share content through people they know.
+### Product Concepts
 
-We proposed an **AI-driven, emotion-aware personalisation layer for Fire TV** that combines mood, viewing history, time-of-day behaviour, and social context to make content discovery more relevant.
+**🎭 Emotion-Aware Personalization**
 
----
+Mood-aware recommendations combining:
 
-## 💡 Product Vision
+- User-selected mood
+- Viewing history
+- Time-of-day behavior
 
-### **"You set the vibe. Fire TV finds what fits."**
+**🤝 Unify**
 
-The solution consists of two complementary experiences:
+A social discovery layer supporting:
 
-### 1. 🎭 Emotion-Aware Personalization
-
-A mood-aware recommendation system that combines:
-
-- **User-selected mood**
-- **Viewing history**
-- **Time-of-day viewing patterns**
-
-to dynamically personalise content recommendations.
-
-Instead of asking:
-
-> *"What genre do you want?"*
-
-Fire TV can understand:
-
-> *"What do you feel like watching right now?"*
-
----
-
-### 2. 🤝 "Unify" — Social Watch Discovery
-
-A social discovery layer designed for shared-device households and friends.
-
-**Unify** enables:
-
-- Profile blending for common interests
+- Profile blending
 - Joint recommendations
-- Synced watchlists
-- Friend/activity-based content cues
-- Co-watching prompts
+- Shared watchlists
+- Friend/activity-based discovery
+- Optional co-watching
 
-The experience is designed to remain **optional and low-friction**, without requiring synchronous viewing or chat.
+### Product Vision
+
+> **"You set the vibe. Fire TV finds what fits."**
 
 ---
 
-## 👥 Target Users
+## Problem
+
+### Content Overload
+Too many choices make discovery time-consuming and increase decision fatigue.
+
+### Limited Emotional Context
+Users often choose content based on their current mood, while traditional recommendations primarily rely on historical behavior.
+
+### Repetitive Discovery
+Users can repeatedly encounter familiar content instead of discovering something new.
+
+### Fragmented Social Discovery
+Friends and household members influence viewing decisions, but this context is not always reflected in recommendations.
+
+### TV Interaction Friction
+Searching and typing with a remote can make traditional discovery cumbersome.
+
+---
+
+## Target Users
 
 ### Gen Z & Young Adults
-
-- Prefer mood-based discovery over browsing by genre
-- Want instant, curated recommendations
-- Seek social discovery without necessarily watching simultaneously
+- Prefer quick, curated discovery.
+- Use mood as a viewing signal.
+- Value social discovery without requiring synchronous viewing.
 
 ### Shared-Device Households
-
-- Multiple users maintain separate profiles
-- Want personalisation without completely mixing preferences
-- Benefit from intelligent overlap between viewing interests
-
-These user needs were translated directly into product features through a **working-backwards approach**.
+- Multiple viewers use the same Fire TV ecosystem.
+- Need personalised profiles.
+- Can benefit from recommendations based on shared interests.
 
 ---
 
-## 🔍 User Need → Product Response
+## User Need → Product Response
 
 | User Need | Product Response |
 |---|---|
-| Mood-based discovery | Mood input drives recommendations |
-| Content fatigue | Fresh and diverse suggestions |
-| Socially relevant discovery | **Unify** surfaces friend/activity-based cues |
-| Low-friction interaction | Remote-friendly, button-based interaction |
-| Multiple viewers | Profile blending + joint recommendations |
+| Mood-based discovery | Mood-aware recommendations |
+| Less browsing | Contextual content ranking |
+| Fresh discovery | Diverse recommendations |
+| Social discovery | Unify |
+| Shared viewing | Joint recommendations |
+| Low-friction interaction | Remote-friendly controls |
+
+# 🎭 Emotion-Aware Personalization
+
+The recommendation experience combines three contextual signals:
+
+- **User-selected mood**
+- **Viewing history**
+- **Time of day**
+
+### Recommendation Flow
+
+**Mood + Viewing History + Time of Day**  
+→ Recommendation Engine  
+→ Ranked Recommendations  
+→ Fire TV  
+→ User Feedback
+
+### Mood
+
+Users explicitly select their current mood through simple, remote-friendly controls.
+
+### Viewing History
+
+Historical viewing behavior provides information about content preferences and engagement patterns.
+
+### Time of Day
+
+Viewing patterns can vary throughout the day, adding another contextual signal to recommendation ranking.
+
+## 🧠 Recommendation Pipeline
+
+**User Signals**  
+→ Feature Processing  
+→ Recommendation Model  
+→ Content Ranking  
+→ Personalized Results  
+→ User Feedback
 
 ---
 
-## 🧠 Recommendation Engine
+# 🤝 Unify
 
-The proposed recommendation pipeline follows:
+**Unify** extends personalization from individual discovery to shared content discovery.
 
-```text
-                    ┌──────────────────┐
-                    │   User Signals   │
-                    └────────┬─────────┘
-                             │
-              ┌──────────────┼──────────────┐
-              ↓              ↓              ↓
-        Viewing History   User Mood    Time of Day
-              │              │              │
-              └──────────────┼──────────────┘
-                             ↓
-                  ┌────────────────────┐
-                  │ Recommendation     │
-                  │ Engine             │
-                  └─────────┬──────────┘
-                            ↓
-                  Ranked Recommendations
-                            ↓
-                    Fire TV Interface
-                            ↓
-                     User Feedback
-                            │
-                            └──────→ Model
-                                    Improvement
+### Core Features
+
+- **Profile Blending** — identify overlap between multiple profiles.
+- **Joint Recommendations** — recommend content based on shared interests.
+- **Shared Watchlists** — save content for future viewing.
+- **Activity Cues** — surface relevant discovery signals from friends or household members.
+- **Optional Co-Watching** — encourage shared viewing without requiring synchronous interaction.
+
+### Unify Flow
+
+**User A History + User B History**  
+→ Profile Blending  
+→ Shared Interests  
+→ Joint Recommendations  
+→ Shared Watchlist
+
+Unify remains **optional**, allowing users to retain control over social participation.
+
+---
+
+# 🏗️ Product Architecture
+
+**User**  
+→ **Contextual Signals**  
+→ Mood + History + Time of Day  
+→ **Recommendation Engine**  
+→ **Personalized Content**  
+→ **Fire TV UI**  
+→ **User Feedback**
+
+---
+
+# 📊 Success Metrics
+
+## Emotion-Aware Personalisation
+
+| Metric | Target |
+|---|---:|
+| Recommended-content engagement | **+20% watch time** |
+| Recommendation satisfaction | **~4/5** |
+| Content rejection within 10 min | **−30%** |
+| Mood-feature adoption | **40% of active users** |
+
+## Unify
+
+| Metric | Target |
+|---|---:|
+| Feature adoption | **>45% of users** |
+| Users invited through blending | **~2 users/profile** |
+| Content satisfaction | **~4/5** |
+| Weekly active users | **+20%** |
+
+> These are **proposed product targets**, not measured production results.
+
+---
+
+# 🔐 Privacy by Design
+
+- **Explicit mood input** — users choose whether to provide mood context.
+- **Profile isolation** — individual viewing histories remain distinguishable.
+- **Local personalisation** — the concept considers keeping behavioural data local.
+- **Optional social features** — Unify does not require participation.
+
+personalisation. The goal is to provide personalisation without making privacy the price of personalisation.
+
+---
+
+# 🚀 Scalability
+
+The concept can extend beyond Fire TV through:
+
+- 🌐 Cross-platform personalisation across mobile and web.
+- 🌍 Localised recommendations using language and local trends.
+- 🔗 Integration with Amazon services such as Prime Video, Alexa and IMDb.
+- 🤝 Expansion of Unify into broader optional social discovery.
+- 🧩 Third-party content layers through partner APIs.
+
+---
+
+# 🎯 Product Outcome
+
+The concept shifts Fire TV discovery from:
+
+> **"Here are thousands of things you could watch."**
+
+to:
+
+> **"Here are a few things that fit what you're looking for right now."**
+
+The product combines:
+
+**Emotional Context + Behavioral Personalization + Social Discovery**
+
+to reduce decision fatigue and make content discovery more relevant.
+
+---
+
+## 📎 Presentation
+
+The accompanying slide deck contains the complete product analysis, user research, feature design, architecture, metrics, privacy considerations, and scalability strategy.
+
+**The deck is the primary detailed artefact; this README provides the project summary and technical/product context.**
+
+---
