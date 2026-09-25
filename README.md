@@ -78,7 +78,7 @@ The experience is designed to remain **optional and low-friction**, without requ
 - Want personalisation without completely mixing preferences
 - Benefit from intelligent overlap between viewing interests
 
-These user needs were translated directly into product features through a **working-backwards approach**. :contentReference[oaicite:1]{index=1}
+These user needs were translated directly into product features through a **working-backwards approach**.
 
 ---
 
@@ -91,8 +91,6 @@ These user needs were translated directly into product features through a **work
 | Socially relevant discovery | **Unify** surfaces friend/activity-based cues |
 | Low-friction interaction | Remote-friendly, button-based interaction |
 | Multiple viewers | Profile blending + joint recommendations |
-
-:contentReference[oaicite:2]{index=2}
 
 ---
 
